@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Workshops</title>
+    <link rel="stylesheet" href="student_dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Career Workshops</h1>
+    </header>
+    <main>
+        <section id="workshops-section">
+            <h2>Upcoming Workshops</h2>
+            <div id="workshops-list"></div>
+        </section>
+        <section id="notifications-section">
+            <h2>Notifications</h2>
+            <ul id="notifications-list"></ul>
+        </section>
+        <section id="workshop-access-section" style="display:none;">
+            <h2>Workshop Access</h2>
+            <button id="join-live-btn">Join Live Workshop</button>
+            <div id="media-player">
+                <video id="workshop-video" width="480" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="media-controls">
+                    <button id="play-btn">Play</button>
+                    <button id="pause-btn">Pause</button>
+                    <button id="stop-btn">Stop</button>
+                </div>
+            </div>
+        </section>
+        <section id="participation-section" style="display:none;">
+            <h2>Participation Tools</h2>
+            <div id="note-taking">
+                <h3>Notes</h3>
+                <textarea id="notes-area" placeholder="Take your notes here..."></textarea>
+                <button id="save-notes-btn">Save Notes</button>
+            </div>
+            <div id="chat-box">
+                <h3>Live Chat</h3>
+                <div id="chat-messages"></div>
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button id="send-chat-btn">Send</button>
+            </div>
+        </section>
+        <section id="post-workshop-section" style="display:none;">
+            <h2>Post-Workshop Engagement</h2>
+            <form id="feedback-form">
+                <label for="rating">Rate the workshop:</label>
+                <select id="rating" required>
+                    <option value="">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="certificate-section">
+                <button id="download-certificate-btn">Download Certificate</button>
+            </div>
+        </section>
+    </main>
+    <script src="student_dashboard.js"></script>
+</body>
+</html>
